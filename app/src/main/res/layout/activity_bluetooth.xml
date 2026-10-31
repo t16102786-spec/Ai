@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        style="@style/Title"
+        android:text="Bluetooth" />
+
+    <TextView
+        style="@style/Label"
+        android:text="Вход (микрофон)" />
+
+    <RadioGroup
+        android:id="@+id/rgIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbInPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="Телефон" />
+
+        <RadioButton
+            android:id="@+id/rbInBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="Наушники (BT SCO)" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/Label"
+        android:text="Выход (звук)" />
+
+    <RadioGroup
+        android:id="@+id/rgOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbOutBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="Наушники (BT)" />
+
+        <RadioButton
+            android:id="@+id/rbOutSpeaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="Динамик телефона" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/Label"
+        android:text="Подключённые устройства" />
+
+    <TextView
+        android:id="@+id/tvDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card_bg"
+        android:padding="12dp"
+        android:textColor="@color/text_dim"
+        android:text="—" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/card"
+            android:text="Обновить"
+            android:textColor="@color/accent" />
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@color/mic"
+            android:text="Найти BT"
+            android:textColor="@color/text" />
+    </LinearLayout>
+</LinearLayout>
